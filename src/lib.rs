@@ -43,7 +43,7 @@ macro_rules! impl_fir {
 
         impl Default for $name {
             fn default() -> Self {
-                $name([0.0; $size])
+                $name([Zero::zero(); $size])
             }
         }
 
