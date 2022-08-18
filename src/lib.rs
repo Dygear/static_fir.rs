@@ -106,6 +106,15 @@ impl<C: FIRCoefs> FIRFilter<C> {
         let (left, right) = self.inner.split_at(self.idx);
         right.iter().chain(left.iter())
     }
+
+    /// Create an iterator over the history of stored samples, where the samples are
+    /// yielded in the order they're stored in the underlying ring buffer.
+    ///
+    /// This may be more efficient than `history` if the order of the samples is
+    /// insignificant.
+    pub fn history_unordered<'a>(&'a self) -> impl Iterator<Item = &'a C::Sample> {
+        self.inner.iter()
+    }
 }
 
 #[cfg(test)]
