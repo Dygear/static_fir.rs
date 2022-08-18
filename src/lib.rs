@@ -1,7 +1,7 @@
 //! Finite-impulse response (FIR) convolution with static tap coefficients.
 
 extern crate num;
-use num::traits::Zero;
+use self::num::Zero;
 
 use std::ops::{Add, Mul, Deref, DerefMut};
 
