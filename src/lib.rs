@@ -1,7 +1,5 @@
 //! Finite-impulse response (FIR) convolution with static tap coefficients.
 
-#![feature(conservative_impl_trait)]
-
 extern crate num;
 
 use std::ops::{Add, Mul, Deref, DerefMut};

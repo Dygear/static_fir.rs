@@ -1,6 +1,6 @@
 [package]
 name = "static_fir"
-version = "1.0.0"
+version = "1.0.1"
 authors = ["Mick Koch <mick@kochm.co>"]
 
 [dependencies]
