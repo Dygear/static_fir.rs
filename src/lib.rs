@@ -1,10 +1,9 @@
 //! Finite-impulse response (FIR) convolution with static tap coefficients.
 
 extern crate num;
+use num::traits::Zero;
 
 use std::ops::{Add, Mul, Deref, DerefMut};
-
-use num::traits::Zero;
 
 /// Provides a sequence of coefficients and storage for sample history.
 pub trait FIRCoefs: Default + Deref<Target = [<Self as FIRCoefs>::Sample]> + DerefMut {
@@ -44,7 +43,7 @@ macro_rules! impl_fir {
 
         impl Default for $name {
             fn default() -> Self {
-                $name([::num::traits::Zero::zero(); $size])
+                $name([num::traits::Zero::zero(); $size])
             }
         }
 
