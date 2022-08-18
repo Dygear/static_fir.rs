@@ -1,7 +1,7 @@
 [package]
 name = "static_fir"
 version = "1.0.1"
-authors = ["Mick Koch <mick@kochm.co>"]
+authors = ["Mick Koch <mick@kochm.co>", "Mark Tomlin <Dygear@gmail.com>"]
 
 [dependencies]
 num = "^0.1.34"
